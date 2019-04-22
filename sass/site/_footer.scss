@@ -3,3 +3,19 @@
     margin-top: 0rem;
     background-color: $blue;
 }
+
+.site-footer-logo-wrapper {
+	position: relative;
+	width:auto;
+	height: auto;
+}
+.site-footer-logo {
+	background-image: url('images/olelo-symbol.svg');
+	background-size: cover;
+	width: 147px;
+	height: 153px;
+}
+.site-footer-info {
+	color: #ffffff;
+	font-size: 0.8rem;
+}

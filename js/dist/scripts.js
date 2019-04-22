@@ -6402,17 +6402,14 @@ jQuery(document).ready(function($){
   // Init ScrollMagic
   var controller = new ScrollMagic.Controller();
 
-   var headPanelScene = new ScrollMagic.Scene({
-        triggerElement: '.trigger-badge',
-        triggerHook: 0.1,
-        revers: true
+   var sidefooterScene = new ScrollMagic.Scene({
+        triggerElement: '.footer-trigger',
+        triggerHook: 0.8,
+        reverse: true
     })
-    .setClassToggle('.header-bg', 'in-view') // add class to fade-in
+    .setClassToggle('.side-footer-info', 'in-view') // add class to fade-in
     .addIndicators()
     .addTo(controller);
-
-
-
 
 });
 

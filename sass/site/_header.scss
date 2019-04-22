@@ -7,15 +7,31 @@
 }
 .header-bg {
 	position:fixed;
-	background-color: #d1d1d1;
+	background-color: $blue;
 	height: 70px;
 	width: 100%;
 	opacity: 0;
+  z-index: 1500;
   	transition: all 0.35s ease-out;
 }
 .header-bg.in-view{
 	opacity: 0.85;
 }
+.small-logo {
+  background-image: url('images/olelo.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-positition: center center;
+  width: 100px;
+  height: 50px;
+  opacity: 0;
+  margin: 25px auto;
+  transition: all 0.35s ease-out 0.5s;
+}
+.small-logo.in-view {
+  opacity: 1;
+}
+
 .nav-wrapper {
 	position: fixed;
 }
@@ -25,12 +41,19 @@
 	height: auto;
 	top: 20px;
 	right: 50px;
+  z-index: 10;
 }
 .site-logo {
 	background-image: url('images/olelo-symbol.svg');
 	background-size: cover;
 	width: 147px;
 	height: 153px;
+}
+.site-number{
+  position:relative;
+  color: #ffffff;
+  z-index: 10;
+  margin-top:1.5rem;
 }
 
 
@@ -136,10 +159,15 @@
   padding: 16px;
 }
 
+button:focus, button:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
 .controls {
 	position: fixed;
-	top: 10px;
-	left: 10px;
+	top: 0px;
+	left: 0px;
  	z-index: 2000;
 // 	background-color: $blue;
 }

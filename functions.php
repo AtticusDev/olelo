@@ -113,3 +113,15 @@ require get_template_directory() . '/inc/customizer.php';
  * Bootstrap Walker.
  */
 require get_template_directory() . '/inc/bootstrap-walker.php';
+
+
+/**
+ * Custom post types.
+ */
+require get_template_directory() . '/inc/post-types/CPT.php';
+
+//Condition custom post type
+require get_template_directory() . '/inc/post-types/register-conditions.php';
+
+
+
