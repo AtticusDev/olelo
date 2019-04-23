@@ -123,5 +123,8 @@ require get_template_directory() . '/inc/post-types/CPT.php';
 //Condition custom post type
 require get_template_directory() . '/inc/post-types/register-conditions.php';
 
+//Quotes custom post type
+require get_template_directory() . '/inc/post-types/register-quotes.php';
+
 
 

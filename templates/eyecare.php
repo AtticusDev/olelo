@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Service
+ * Template Name: Eye Care
 
  * The template for displaying all pages
  *
@@ -21,7 +21,7 @@ get_header(); ?>
 					<?php
 					while ( have_posts() ) : the_post();
 
-						get_template_part( 'template-parts/content', 'service' );
+						get_template_part( 'template-parts/content', 'eyecare' );
 
 
 					endwhile; // End of the loop.

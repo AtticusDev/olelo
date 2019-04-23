@@ -11,11 +11,15 @@ function olelo_scripts() {
 
 	wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js', array(), false, true );
 
+	wp_enqueue_script( 'ImagesLoaded-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js', array(), false, true );
+
 	wp_enqueue_script( 'scrollMagic-js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js', array(), false, true );
 
 	wp_enqueue_script( 'scrollMagicIndicators-js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js', array(), false, true );
 
 	wp_enqueue_script( 'ScrollMagicGsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', array(), false, true );
+
+	wp_enqueue_script( 'GsapScrollTo-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js', array(), false, true );
 
 	wp_enqueue_script( 'olelo-fa', '//use.fontawesome.com/releases/v5.0.1/js/all.js', array(), '5.0.1' );
 

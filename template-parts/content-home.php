@@ -49,7 +49,7 @@
 				<div class="col-md-4 service-block">
 					<div class="box<?php echo $i; ?>">
 						<a href="<?php echo $link; ?>">
-						<div class="serviceImage" style="background-image:url('<?php echo $image; ?>'); ">
+						<div class="serviceImage bcg" style="background-image:url('<?php echo $image; ?>'); ">
 						</div>
 						</a>
 					</div>

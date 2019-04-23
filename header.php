@@ -19,7 +19,16 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="is-loading" <?php body_class(); ?>>
+
+<div id="preloader">
+    <div class="txt">
+        <p class="txt-perc">0%</p>
+        <div class="progress"><span></span></div>
+    </div>
+</div>
+
+
 <div id="page" class="site">
 
 <?php
