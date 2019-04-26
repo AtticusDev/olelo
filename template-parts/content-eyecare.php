@@ -13,13 +13,15 @@
 <div class="container-fluid">
 	<div class="row justify-content-end">
 		<div class="col-md-8 main-content-area">
-			<div class="service-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+			<div class="bcg-parallax">
+				<div class="bcg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+				</div>
 			</div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
 						<div class="title-wrapper">
-							<h2><?php the_title(); ?></h2>
+							<h1><?php the_title(); ?></h1>
 							<div class="service-nav">
 								<ul>
 

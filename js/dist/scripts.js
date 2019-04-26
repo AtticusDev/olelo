@@ -6408,11 +6408,31 @@ jQuery(document).ready(function($){
         reverse: true
     })
     .setClassToggle('.side-footer-info', 'in-view') // add class to fade-in
+//    .addIndicators()
+    .addTo(controller);
+
+    var toplogoScene = new ScrollMagic.Scene({
+        triggerElement: '.trigger-badge',
+        triggerHook: 0.2,
+        reverse: true
+    })
+    .setClassToggle('.header-bg', 'in-view') // add class to fade-in
     .addIndicators()
     .addTo(controller);
 
+  var slideParallaxScene = new ScrollMagic.Scene({
+    triggerElement: '.bcg-parallax',
+    triggerHook: 0,
+    duration: '70%'
+  })
+  .setTween(TweenMax.from('.bcg', 1, {y:'-50%', opacity: '1', ease:Power0.easeNone}))
+//  .addIndicators()
+  .addTo(controller);
 
-  // number of loaded images for preloader progress
+
+
+
+/*  // number of loaded images for preloader progress
   var loadedCount = 0; //current number of images loaded
   var imagesToLoad = $('.bcg').length; //number of slides with .bcg container
   var loadingProgress = 0; //timeline progress - starts at 0
@@ -6469,6 +6489,7 @@ jQuery(document).ready(function($){
 
     return preloaderOutTl;
   }
+  */
 
 
 });

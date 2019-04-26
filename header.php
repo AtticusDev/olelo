@@ -19,15 +19,17 @@
 <?php wp_head(); ?>
 </head>
 
-<body class="is-loading" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
+	
+<!-- <body class="is-loading" <?php body_class(); ?>> -->
 
-<div id="preloader">
+<!--<div id="preloader">
     <div class="txt">
         <p class="txt-perc">0%</p>
         <div class="progress"><span></span></div>
     </div>
 </div>
-
+-->
 
 <div id="page" class="site">
 
@@ -38,7 +40,7 @@ if ( is_page_template( 'templates/home.php' ) ) {
 		<div class="container-fluid header-panel">
 			<div class="row justify-content-between">
 				<div class="header-bg justify-content-center">
-					<div class="small-logo">
+					<div class="small-logo-global">
 					</div>
 				</div>
 				<div class="col-md-2">

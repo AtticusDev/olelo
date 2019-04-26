@@ -85,6 +85,9 @@ body {
   -webkit-font-smoothing:antialiased;
 }
 
+h1 {
+  font-size: 2.4rem;
+}
 h1, h2, h3 {
   color: $orange;
 }
@@ -211,6 +214,10 @@ h1, h2, h3 {
   padding: 8rem 4rem;
   color: #fff;
 }
+.contact-locations-panel{
+  background-color: $lightgray;
+  padding: 8rem 4rem;
+}
 .rule-right {
   border-right: 1px solid #fff;
 }
@@ -281,6 +288,7 @@ h1, h2, h3 {
 
 .main-content-area {
   width: 100%;
+  height: auto;
   padding: 0;
   background-color: $lightgray;
 }
@@ -304,21 +312,42 @@ h1, h2, h3 {
 
 /* SERVICE SECTION */
 
+.bcg-parallax {
+  padding: 300px 0;
+  color: #fff;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+.bcg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  z-index: 1;
+  opacity: 0;
+}
+
+
+
 .title-wrapper {
   padding: 4rem 0.5rem 3rem 3rem;
 }
 .content-wrapper {
-  padding: 4rem;
+  padding: 2.5rem;
 }
 .service-banner{
   width: 100%;
   height: 400px;
-  background-color: #000;
+//  background-color: #000;
   background-size: cover;
   background-position: center center;
 }
 
 .service-nav {
+  margin-top: 3rem;
   color: $blue;
   ul {
     list-style: none;
@@ -367,6 +396,13 @@ h1, h2, h3 {
 }
 .quote-by {
   font-size: 0.9rem;
+}
+
+/* CONTACT PAGE */
+
+.contact-title {
+  margin-bottom: 4rem;
+  margin-top: 6rem;
 }
 
 /* TWO COLUMN FORM STYLING */

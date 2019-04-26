@@ -13,7 +13,9 @@
 <div class="container-fluid">
 	<div class="row justify-content-end">
 		<div class="col-md-8 main-content-area">
-			<div class="service-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+			<div class="bcg-parallax">
+				<div class="bcg" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+				</div>
 			</div>
 			<div class="container">
 				<div class="row">

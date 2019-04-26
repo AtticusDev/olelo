@@ -12,7 +12,7 @@
 
 	<div id="banner">
 		<div class="overlay"></div>
-			<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+			<video preload="auto" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
 			    <source src="<?php bloginfo('stylesheet_directory');?>/images/25371152-preview-flipped.mp4" type="video/mp4">
 			</video>
 		<div class="container">
@@ -49,7 +49,7 @@
 				<div class="col-md-4 service-block">
 					<div class="box<?php echo $i; ?>">
 						<a href="<?php echo $link; ?>">
-						<div class="serviceImage bcg" style="background-image:url('<?php echo $image; ?>'); ">
+						<div class="serviceImage" style="background-image:url('<?php echo $image; ?>'); ">
 						</div>
 						</a>
 					</div>
@@ -89,28 +89,26 @@
 		<div class="row">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 text-center rule-right">
-						Kensington Medical<br />
-						Chambers<br />
-						10 Knaresborough Pl<br />
-						Kensington<br />
-						London<br />
-						SW5 0TG<br />
-					</div>
-					<div class="col-md-4 text-center rule-right">
-						Chelsea Diagnostic<br />
-						Centre<br />
-						272 King's Rd<br />
-						Chelsea<br />
-						London<br />
-						SW3 5AW<br />
-					</div>
-					<div class="col-md-4 text-center">
-						Lister Hospital<br />
-						Chelsea Bridge Road<br />
-						London<br />
-						SW1W 8RH<br />
-					</div>
+											<?php
+					// check if the repeater field has rows of data
+					if( have_rows('address_block', 'option') ):
+
+					 	// loop through the rows of data
+					    while ( have_rows('address_block', 'option') ) : the_row();
+				    	?>
+						<div class="col-md-4 text-center rule-right">
+				    	<?php the_sub_field('address_box'); ?>
+						<p><a href="<?php the_sub_field('google_map_link'); ?>" target="_blank">
+				        view in google maps
+				    	</a></p>
+				    	</div>
+
+				        <?php
+					    endwhile;
+						else :
+						    echo "nothing found here";
+						endif;
+						?>
 				</div>
 			</div>
 		</div>
