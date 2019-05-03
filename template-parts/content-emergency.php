@@ -22,29 +22,6 @@
 					<div class="col-md-4">
 						<div class="title-wrapper">
 							<h2><?php the_title(); ?></h2>
-<!--							<div class="service-nav">
-								<ul>
-
-								<?php
-								$args = array(
-								 'post_type' => 'condition',
-								 'category_name' => 'eye-conditions',
-								 'order' => 'ASC' 
-								);
-								$loop = new WP_Query( $args );
-								while ( $loop->have_posts() ) : $loop->the_post();
-								?>
-
-									<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-
-								<?php
-									endwhile;
-									wp_reset_query();
-								?>
-
-								</ul>
-							</div>
--->
 						</div>
 					</div>
 					<div class="col-md-8 col-lg-6">
@@ -53,19 +30,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center footer-trigger">
-					<div class="col-md-10 text-center">
-						<h2 class="dark-blue">Enquire about <span style="text-transform: lowercase;"><?php the_title(); ?></span></h2>
-						<?php
-							echo do_shortcode('[gravityform id=1 name=Enquiry title=false description=false]');
-						?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-				</div>
+				<?php
+				get_template_part( 'template-parts/formblock' );
+				?>
 			</div>
 		</div>
 	</div>

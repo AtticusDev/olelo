@@ -40,7 +40,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #dc3545;
-  --orange: #d5c4b4;
+  --orange: #c9ae97;
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
@@ -55,7 +55,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #dc3545;
-  --orange: #d5c4b4;
+  --orange: #c9ae97;
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
@@ -7062,13 +7062,14 @@ body {
   font-weight: 400;
   color: #495057;
   font-size: 0.9rem;
+  line-height: 1.6rem;
   -webkit-font-smoothing: antialiased; }
 
 h1 {
   font-size: 2.4rem; }
 
 h1, h2, h3 {
-  color: #d5c4b4; }
+  color: #c9ae97; }
 
 .dark-blue {
   color: #4a545d; }
@@ -7077,7 +7078,7 @@ h1, h2, h3 {
 #banner {
   position: relative;
   background-color: black;
-  height: 35rem;
+  height: 40rem;
   width: 100%;
   overflow: hidden; }
 
@@ -7110,7 +7111,8 @@ h1, h2, h3 {
 
 @media (pointer: coarse) and (hover: none) {
   #banner {
-    background: url("images/service-image.jpg") black no-repeat center center scroll; }
+    background: url("images/banner-image.jpg") black no-repeat center center scroll;
+    background-size: cover; }
   #banner video {
     display: none; } }
 
@@ -7119,7 +7121,14 @@ h1, h2, h3 {
   background-size: cover; }
 
 .home-logo {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  background: url("images/olelo.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto; }
 
 .intro-text {
   width: 50%;
@@ -7127,17 +7136,20 @@ h1, h2, h3 {
   color: #ffffff; }
 
 .home-intro {
-  margin: 4rem 0rem 2rem 0rem; }
+  margin: 6rem 0rem 2rem 0rem;
+  font-size: 1.4rem; }
   .home-intro h3 {
-    color: #ffffff; }
+    color: #ffffff;
+    font-size: 2rem; }
 
 .service-wrapper {
   padding-top: 4rem;
   padding-bottom: 4rem;
   background-color: #f5f5f3; }
 
-.service-block {
+.service-block1, .service-block2, .service-block3 {
   background-size: cover;
+  background-color: #000000;
   width: 100%;
   height: 400px;
   overflow: hidden;
@@ -7145,15 +7157,52 @@ h1, h2, h3 {
   border-radius: 0 0 25px 25px;
   padding: 0 0px; }
 
+.service-block1 {
+  -webkit-transition: all 0.75s ease-out 0.25s;
+          transition: all 0.75s ease-out 0.25s;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  opacity: 0; }
+
+.service-block1.in-view {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1; }
+
+.service-block2 {
+  -webkit-transition: all 0.75s ease-out;
+          transition: all 0.75s ease-out;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  opacity: 0; }
+
+.service-block2.in-view {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1; }
+
+.service-block3 {
+  -webkit-transition: all 0.75s ease-out 0.25s;
+          transition: all 0.75s ease-out 0.25s;
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  opacity: 0; }
+
+.service-block3.in-view {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1; }
+
 .box1, .box2, .box3 {
   overflow: hidden;
   position: relative;
   width: 100%;
   height: 100%; }
 
-.serviceImage {
+.serviceImage1, .serviceImage2, .serviceImage3 {
   height: 100%;
   width: 100%;
+  opacity: 0.70;
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -7198,27 +7247,13 @@ h1, h2, h3 {
   height: 0px;
   z-index: 1000; }
 
-.small-logo-global {
-  position: relative;
-  top: 27px;
-  background-image: url("images/olelo.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-positition: center center;
-  width: 100px;
-  height: 50px;
-  opacity: 1;
-  margin: 0 auto;
-  -webkit-transition: all 0.35s ease-out 0.5s;
-          transition: all 0.35s ease-out 0.5s; }
-
 .side-symbol {
   background-image: url("images/olelo-symbol-only.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 300px;
-  height: 221px;
+  width: 20vw;
+  height: 15vw;
   margin: 0 auto; }
 
 .side-contact {
@@ -7271,7 +7306,7 @@ h1, h2, h3 {
 
 /* SERVICE SECTION */
 .bcg-parallax {
-  padding: 300px 0;
+  padding: 250px 0;
   color: #fff;
   background-color: #000;
   position: relative;
@@ -7279,6 +7314,7 @@ h1, h2, h3 {
 
 .bcg {
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -7288,7 +7324,7 @@ h1, h2, h3 {
   opacity: 0; }
 
 .title-wrapper {
-  padding: 4rem 0.5rem 3rem 3rem; }
+  padding: 4rem 0.5rem 1rem 3rem; }
 
 .content-wrapper {
   padding: 2.5rem; }
@@ -7299,6 +7335,9 @@ h1, h2, h3 {
   background-size: cover;
   background-position: center center; }
 
+.service-nav-wrapper {
+  padding: 0rem 0.5rem 3rem 3rem; }
+
 .service-nav {
   margin-top: 3rem;
   color: #4a545d; }
@@ -7308,7 +7347,7 @@ h1, h2, h3 {
     padding: 0; }
   .service-nav li {
     display: block;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #c0bcc0;
     color: #4a545d; }
     .service-nav li a {
       display: block;
@@ -7322,6 +7361,37 @@ h1, h2, h3 {
       background-color: #4a545d;
       color: #fff;
       text-decoration: none; }
+
+.download-wrapper {
+  position: relative; }
+
+.download-item {
+  position: relative;
+  height: 45px; }
+
+.download-link {
+  padding-left: 40px;
+  padding-top: 3px; }
+
+.download-link::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  background-image: url("images/adobe-pdf-icon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px; }
+
+/* ABOUT SECTION */
+.about-intro p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding-top: 4rem; }
+
+.team-block {
+  padding-top: 4rem; }
 
 /*  CONDITION SECTION */
 .condition-title {
@@ -7338,6 +7408,7 @@ h1, h2, h3 {
   width: 100%; }
 
 .quote-block {
+  font-family: 'Abhaya Libre', serif;
   font-size: 1.1rem;
   text-align: center;
   margin-top: 15rem;
@@ -7346,10 +7417,17 @@ h1, h2, h3 {
 .quote-by {
   font-size: 0.9rem; }
 
+/* PATIENT INFORMATION */
+.pi-copy {
+  margin: 4rem 0rem 1rem 0rem; }
+
 /* CONTACT PAGE */
 .contact-title {
   margin-bottom: 4rem;
   margin-top: 6rem; }
+
+.form-block {
+  margin: 4rem 0rem; }
 
 /* TWO COLUMN FORM STYLING */
 .gform_wrapper.two-column_wrapper ul.gform_fields {
@@ -7408,18 +7486,93 @@ div.gform_footer.top_label {
   .gform_wrapper.two-column_wrapper ul.gform_fields.gform_column {
     clear: both;
     width: 100%; }
+  /* SIDE PANEL ON MOBILE */
   .side-global-panel {
-    height: 80px; }
+    height: 70px; }
   .side-header-panel {
-    height: 80px; }
+    height: 70px; }
   .side-symbol {
     display: none; }
   .side-contact {
     display: none; }
+  .side-footer-info {
+    display: none; }
   .title-wrapper {
     padding: 2rem 0.5rem 2rem 2rem; }
   .content-wrapper {
-    padding: 2rem; } }
+    padding: 2rem; }
+  .site-logo-wrapper {
+    display: none; }
+  .home-logo {
+    background: url("images/olelo-symbol.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 150px;
+    height: 160px;
+    margin: 0 auto; }
+  #banner .container {
+    position: relative;
+    z-index: 2;
+    margin-top: 6rem; }
+  .intro-text {
+    width: 70%;
+    text-align: center;
+    color: #ffffff; }
+  .home-intro {
+    margin: 3rem 0rem 1rem 0rem;
+    font-size: 1rem; }
+    .home-intro h3 {
+      color: #ffffff;
+      font-size: 1.6rem; }
+  .locations-panel {
+    padding: 3rem 1rem; }
+  .rule-right {
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    margin: 1rem 1rem; }
+  .service-block1, .service-block2, .service-block3 {
+    width: 80%;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #f5f5f3;
+    border-radius: 0 0 25px 25px;
+    padding: 0 0px;
+    margin: 0.5rem auto; }
+  .service-block1 {
+    -webkit-transition: all 0.75s ease-out 0.25s;
+            transition: all 0.75s ease-out 0.25s;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1; }
+  .service-block2 {
+    -webkit-transition: all 0.75s ease-out;
+            transition: all 0.75s ease-out;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1; }
+  .service-block3 {
+    -webkit-transition: all 0.75s ease-out 0.25s;
+            transition: all 0.75s ease-out 0.25s;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1; }
+  .bcg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 60%;
+    z-index: 1;
+    opacity: 0; }
+  .title-wrapper {
+    padding: 2rem 0.5rem 0.5rem 0rem; }
+  .about-intro p {
+    padding-top: 1rem; }
+  .team-block {
+    padding-top: 1rem; } }
 
 /*--------------------------------------------------------------
 ## Widgets
@@ -7456,6 +7609,10 @@ div.gform_footer.top_label {
   position: relative;
   height: 0px; }
 
+.mobile-header-panel {
+  position: relative;
+  height: 0px; }
+
 .header-bg {
   position: fixed;
   background-color: #4a545d;
@@ -7469,20 +7626,19 @@ div.gform_footer.top_label {
 .header-bg.in-view {
   opacity: 0.85; }
 
-.small-logo {
+.small-logo-global {
+  position: relative;
+  top: 27px;
   background-image: url("images/olelo.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-positition: center center;
   width: 100px;
   height: 50px;
-  opacity: 0;
-  margin: 25px auto;
+  opacity: 1;
   -webkit-transition: all 0.35s ease-out 0.5s;
-          transition: all 0.35s ease-out 0.5s; }
-
-.small-logo.in-view {
-  opacity: 1; }
+          transition: all 0.35s ease-out 0.5s;
+  margin: 0 auto; }
 
 .nav-wrapper {
   position: fixed; }
@@ -7509,7 +7665,7 @@ div.gform_footer.top_label {
 
 .slide-menu {
   position: fixed;
-  width: 320px;
+  width: 100vw;
   max-width: 100%;
   height: 100vh;
   top: 0;
@@ -7560,7 +7716,9 @@ div.gform_footer.top_label {
   display: block;
   padding: 12px 24px;
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  border-bottom: 1px solid #c0bcc0;
+  margin-left: 20px; }
 
 .slide-menu.no-transition, .slide-menu.no-transition * {
   -webkit-transition: none !important;
@@ -7581,7 +7739,8 @@ div.gform_footer.top_label {
   color: #fff; }
 
 .slide-menu a:hover {
-  background: #3c9793; }
+  background: #c0bcc0;
+  color: #4a545d; }
 
 .slide-menu .btn {
   float: right;
@@ -7610,6 +7769,10 @@ button:focus, button:active {
 
 .admin-bar .controls {
   top: 32px; }
+
+@media only screen and (max-width: 768px) {
+  .site-number {
+    display: none; } }
 
 /* =Preloader */
 /*

@@ -40,6 +40,14 @@ jQuery(document).ready(function($){
   $(serviceImage1).mouseout(function(){
     TweenMax.to(serviceImage1, 0.5, {scale: 1});
   });
+ var service1 = $('.serviceImage1');
+  $(service1).mouseover(function(){
+    TweenMax.to(service1, 1, {opacity:1});
+  });
+  $(service1).mouseout(function(){
+    TweenMax.to(service1, 0.5, {opacity: 0.70});
+  });
+
  var serviceImage2 = $('.box2');
   $(serviceImage2).mouseover(function(){
     TweenMax.to(serviceImage2, 1, {scale:1.15});
@@ -47,12 +55,28 @@ jQuery(document).ready(function($){
   $(serviceImage2).mouseout(function(){
     TweenMax.to(serviceImage2, 0.5, {scale: 1});
   });
+ var service2 = $('.serviceImage2');
+  $(service2).mouseover(function(){
+    TweenMax.to(service2, 1, {opacity:1});
+  });
+  $(service2).mouseout(function(){
+    TweenMax.to(service2, 0.5, {opacity: 0.70});
+  });
+
+
  var serviceImage3 = $('.box3');
   $(serviceImage3).mouseover(function(){
     TweenMax.to(serviceImage3, 1, {scale:1.15});
   });
   $(serviceImage3).mouseout(function(){
     TweenMax.to(serviceImage3, 0.5, {scale: 1});
+  });
+ var service3 = $('.serviceImage3');
+  $(service3).mouseover(function(){
+    TweenMax.to(service3, 1, {opacity:1});
+  });
+  $(service3).mouseout(function(){
+    TweenMax.to(service3, 0.5, {opacity: 0.70});
   });
 
 
@@ -74,8 +98,37 @@ jQuery(document).ready(function($){
         reverse: true
     })
     .setClassToggle('.header-bg', 'in-view') // add class to fade-in
-    .addIndicators()
+//    .addIndicators()
     .addTo(controller);
+
+    var serviceBlock1Scene = new ScrollMagic.Scene({
+        triggerElement: '.service-block1',
+        triggerHook: 0.6,
+        reverse: false
+    })
+    .setClassToggle('.service-block1', 'in-view') // add class to fade-in
+//    .addIndicators()
+    .addTo(controller);
+
+    var serviceBlock2Scene = new ScrollMagic.Scene({
+        triggerElement: '.service-wrapper',
+        triggerHook: 0.6,
+        reverse: false
+    })
+    .setClassToggle('.service-block2', 'in-view') // add class to fade-in
+//    .addIndicators()
+    .addTo(controller);
+
+    var serviceBlock3Scene = new ScrollMagic.Scene({
+        triggerElement: '.service-block3',
+        triggerHook: 0.6,
+        reverse: false
+    })
+    .setClassToggle('.service-block3', 'in-view') // add class to fade-in
+//    .addIndicators()
+    .addTo(controller);
+
+
 
   var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.bcg-parallax',

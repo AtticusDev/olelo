@@ -7,6 +7,8 @@ function olelo_scripts() {
 
 	wp_enqueue_style( 'olelo-google-fonts', 'https://fonts.googleapis.com/css?family=Nunito:300,400,600', false );
 
+	wp_enqueue_style( 'olelo-google-fonts', 'https://fonts.googleapis.com/css?family=Abhaya+Libre', false );
+
 	wp_enqueue_script( 'olelo-js', get_template_directory_uri() . '/js/dist/scripts.min.js', array('jquery'), ' ', true );
 
 	wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js', array(), false, true );

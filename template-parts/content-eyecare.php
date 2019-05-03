@@ -19,9 +19,15 @@
 			</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-12">
 						<div class="title-wrapper">
 							<h1><?php the_title(); ?></h1>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="service-nav-wrapper">
 							<div class="service-nav">
 								<ul>
 
@@ -46,25 +52,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-8 col-lg-6">
+					<div class="col-md-8 col-lg-8">
 						<div class="content-wrapper">
 						<p><?php the_content(); ?></p>
 						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center footer-trigger">
-					<div class="col-md-10 text-center">
-						<h2 class="dark-blue">Enquire about <span style="text-transform: lowercase;"><?php the_title(); ?></span></h2>
-						<?php
-							echo do_shortcode('[gravityform id=1 name=Enquiry title=false description=false]');
-						?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-				</div>
+				<?php
+				get_template_part( 'template-parts/formblock' );
+				?>
 			</div>
 		</div>
 	</div>

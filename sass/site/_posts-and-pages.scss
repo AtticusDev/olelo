@@ -82,6 +82,7 @@ body {
   font-weight: 400;
   color: $gray-700;
   font-size: 0.9rem;
+  line-height: 1.6rem;
   -webkit-font-smoothing:antialiased;
 }
 
@@ -100,7 +101,7 @@ h1, h2, h3 {
 #banner {
   position: relative;
   background-color: black;
-  height: 35rem;
+  height: 40rem;
   width: 100%;
   overflow: hidden;
 }
@@ -139,7 +140,8 @@ h1, h2, h3 {
 
 @media (pointer: coarse) and (hover: none) {
   #banner {
-    background: url('images/service-image.jpg') black no-repeat center center scroll;
+    background: url('images/banner-image.jpg') black no-repeat center center scroll;
+    background-size: cover;
   }
   #banner video {
     display: none;
@@ -152,17 +154,25 @@ h1, h2, h3 {
 }
 .home-logo{
   margin-bottom: 2rem;
+  background:url('images/olelo.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
 }
 .intro-text{
-//  margin: 18rem 0rem 6rem 0rem;
   width: 50%;
   text-align: center;
   color: #ffffff;
 }
 .home-intro{
-  margin: 4rem 0rem 2rem 0rem;
+  margin: 6rem 0rem 2rem 0rem;
+  font-size: 1.4rem;
   h3 {
     color: #ffffff;
+    font-size: 2rem;
   }
 }
 .service-wrapper{
@@ -170,8 +180,9 @@ h1, h2, h3 {
   padding-bottom: 4rem;
   background-color: $lightgray;
 }
-.service-block{
+.service-block1, .service-block2, .service-block3, {
   background-size: cover;
+  background-color: #000000;
   width: 100%;
   height: 400px;
   overflow:hidden;
@@ -179,15 +190,53 @@ h1, h2, h3 {
   border-radius: 0 0 25px 25px;
   padding: 0 0px;
 }
+.service-block1 {
+  transition: all 0.75s ease-out 0.25s;
+  transform: translateX(-200px);
+  opacity: 0;
+}
+.service-block1.in-view {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.service-block2 {
+  transition: all 0.75s ease-out;
+  transform: translateY(200px);
+  opacity: 0;
+}
+.service-block2.in-view {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.service-block3 {
+  transition: all 0.75s ease-out 0.25s;
+  transform: translateX(200px);
+  opacity: 0;
+}
+.service-block3.in-view {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+
+
+
+
 .box1, .box2, .box3 {
   overflow:hidden;
   position:relative;
   width: 100%;
   height: 100%;
 }
-.serviceImage {
+
+
+
+.serviceImage1, .serviceImage2, .serviceImage3, {
   height: 100%;
   width:100%;
+  opacity: 0.70;
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
@@ -237,26 +286,13 @@ h1, h2, h3 {
   height: 0px;
   z-index: 1000;
 }
-.small-logo-global {
-  position: relative;
-  top: 27px;
-  background-image: url('images/olelo.svg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-positition: center center;
-  width: 100px;
-  height: 50px;
-  opacity: 1;
-  margin: 0 auto;
-  transition: all 0.35s ease-out 0.5s;
-}
 .side-symbol {
    background-image: url('images/olelo-symbol-only.svg');
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center center;
-   width: 300px;
-   height: 221px;
+   width: 20vw;
+   height: 15vw;
    margin: 0 auto;
 }
 .side-contact {
@@ -313,7 +349,7 @@ h1, h2, h3 {
 /* SERVICE SECTION */
 
 .bcg-parallax {
-  padding: 300px 0;
+  padding: 250px 0;
   color: #fff;
   background-color: #000;
   position: relative;
@@ -321,6 +357,7 @@ h1, h2, h3 {
 }
 .bcg {
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -333,7 +370,7 @@ h1, h2, h3 {
 
 
 .title-wrapper {
-  padding: 4rem 0.5rem 3rem 3rem;
+  padding: 4rem 0.5rem 1rem 3rem;
 }
 .content-wrapper {
   padding: 2.5rem;
@@ -346,6 +383,10 @@ h1, h2, h3 {
   background-position: center center;
 }
 
+.service-nav-wrapper {
+  padding: 0rem 0.5rem 3rem 3rem; 
+}
+
 .service-nav {
   margin-top: 3rem;
   color: $blue;
@@ -356,7 +397,7 @@ h1, h2, h3 {
   }
   li {
     display: block;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid $lightblue;
     color: $blue;
     a{
       display: block;
@@ -374,6 +415,44 @@ h1, h2, h3 {
   }
 }
 
+.download-wrapper {
+  position: relative;
+}
+.download-item {
+  position: relative;
+  height: 45px;  
+}
+.download-link {
+  padding-left: 40px;
+  padding-top: 3px;
+}
+.download-link::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  background-image: url('images/adobe-pdf-icon.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+
+}
+
+
+
+/* ABOUT SECTION */
+
+.about-intro p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding-top: 4rem;
+}
+
+.team-block {
+  padding-top: 4rem;
+}
+
 /*  CONDITION SECTION */
 .condition-title {
     margin: 3rem 0;
@@ -389,6 +468,7 @@ h1, h2, h3 {
   width:100%;
 }
 .quote-block {
+  font-family: 'Abhaya Libre', serif;
   font-size: 1.1rem;
   text-align: center;
   margin-top: 15rem;
@@ -398,13 +478,21 @@ h1, h2, h3 {
   font-size: 0.9rem;
 }
 
+/* PATIENT INFORMATION */
+
+.pi-copy {
+  margin: 4rem 0rem 1rem 0rem;
+}
+
 /* CONTACT PAGE */
 
 .contact-title {
   margin-bottom: 4rem;
   margin-top: 6rem;
 }
-
+.form-block {
+  margin: 4rem 0rem;
+}
 /* TWO COLUMN FORM STYLING */
 
 .gform_wrapper.two-column_wrapper ul.gform_fields {
@@ -469,7 +557,6 @@ div.gform_footer.top_label {
 }
 
 
-
 @media only screen and (max-width: 768px) {
 
   .gform_wrapper.two-column_wrapper ul.gform_fields.gform_column {
@@ -477,11 +564,12 @@ div.gform_footer.top_label {
     width: 100%;
   }
 
+  /* SIDE PANEL ON MOBILE */
   .side-global-panel {
-    height: 80px;
+    height: 70px;
   }
   .side-header-panel{
-    height: 80px;
+    height: 70px;
   }
 
   .side-symbol {
@@ -491,11 +579,103 @@ div.gform_footer.top_label {
   .side-contact {
     display:none;
   }
+  .side-footer-info {
+    display:none;
+  }
   .title-wrapper {
     padding: 2rem 0.5rem 2rem 2rem;
   }
   .content-wrapper {
     padding: 2rem;
+  }
+  .site-logo-wrapper {
+    display: none;
+  }
+  .home-logo{
+    background:url('images/olelo-symbol.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 150px;
+    height: 160px;
+    margin: 0 auto;
+  }
+  #banner .container {
+    position: relative;
+    z-index: 2;
+    margin-top: 6rem;
+  }
+  .intro-text{
+    width: 70%;
+    text-align: center;
+    color: #ffffff;
+  }
+  .home-intro{
+    margin: 3rem 0rem 1rem 0rem;
+    font-size: 1rem;
+    h3 {
+      color: #ffffff;
+      font-size: 1.6rem;
+    }
+  }
+  .locations-panel{
+    padding: 3rem 1rem;
+  }
+
+  .rule-right {
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    margin: 1rem 1rem;
+  }
+
+  .service-block1, .service-block2, .service-block3, {
+    width: 80%;
+    height: 300px;
+    overflow:hidden;
+    border:1px solid $lightgray;
+    border-radius: 0 0 25px 25px;
+    padding: 0 0px;
+    margin:0.5rem auto;
+  }
+ 
+  .service-block1 {
+    transition: all 0.75s ease-out 0.25s;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  .service-block2 {
+    transition: all 0.75s ease-out;
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .service-block3 {
+    transition: all 0.75s ease-out 0.25s;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  .bcg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 60%;
+    z-index: 1;
+    opacity: 0;
+  }
+  .title-wrapper {
+     padding: 2rem 0.5rem 0.5rem 0rem;
+  }
+  .about-intro p {
+    padding-top: 1rem;
+  }
+
+  .team-block {
+    padding-top: 1rem;
   }
 
 }

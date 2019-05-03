@@ -19,9 +19,8 @@
 <!--				<div class="row d-flex h-100 text-center justify-content-center"> -->
 				<div class="row justify-content-center">
 					<div class="intro-text">
-						<div class="trigger-badge">
+						<div class="trigger-badge justify-content-center">
 							<div class="home-logo">
-								<img src="<?php bloginfo('stylesheet_directory');?>/images/olelo.svg" style="width: 350px;">
 							</div>
 							<div class="home-intro">
 							<?php
@@ -46,10 +45,10 @@
 				$image = get_sub_field('image');
 				$i = $i+1;
 				?>
-				<div class="col-md-4 service-block">
+				<div class="col-md-4 service-block<?php echo $i; ?>">
 					<div class="box<?php echo $i; ?>">
 						<a href="<?php echo $link; ?>">
-						<div class="serviceImage" style="background-image:url('<?php echo $image; ?>'); ">
+						<div class="serviceImage<?php echo $i; ?>" style="background-image:url('<?php echo $image; ?>'); ">
 						</div>
 						</a>
 					</div>

@@ -5,6 +5,12 @@
 	position:relative;
 	height: 0px;
 }
+
+.mobile-header-panel{
+  position:relative;
+  height: 0px;
+}
+
 .header-bg {
 	position:fixed;
 	background-color: $blue;
@@ -12,24 +18,24 @@
 	width: 100%;
 	opacity: 0;
   z-index: 1500;
-  	transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out;
 }
 .header-bg.in-view{
 	opacity: 0.85;
 }
-.small-logo {
+
+.small-logo-global {
+  position: relative;
+  top: 27px;
   background-image: url('images/olelo.svg');
   background-size: 100%;
   background-repeat: no-repeat;
   background-positition: center center;
   width: 100px;
   height: 50px;
-  opacity: 0;
-  margin: 25px auto;
-  transition: all 0.35s ease-out 0.5s;
-}
-.small-logo.in-view {
   opacity: 1;
+  transition: all 0.35s ease-out 0.5s;
+  margin: 0 auto;
 }
 
 .nav-wrapper {
@@ -59,7 +65,8 @@
 
 .slide-menu {
   position: fixed;
-  width: 320px;
+//  width: 320px;
+  width: 100vw;
   max-width: 100%;
   height: 100vh;
   top: 0;
@@ -111,6 +118,8 @@
   padding: 12px 24px;
   color: #fff;
   text-decoration: none;
+  border-bottom: 1px solid $lightblue;
+  margin-left: 20px;
 }
 
 .slide-menu.no-transition, .slide-menu.no-transition * {
@@ -137,7 +146,9 @@
 }
 
 .slide-menu a:hover {
-  background: #3c9793;
+//  background: #3c9793;
+  background: $lightblue;
+  color: $blue;
 }
 
 .slide-menu .btn {
@@ -145,6 +156,7 @@
   color: #fff;
   background: #34817e;
   padding: 8px;
+
 }
 
 .slide-menu .btn:hover {
@@ -174,6 +186,16 @@ button:focus, button:active {
 
 .admin-bar .controls {
 	top: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-panel {
+//    display: none;
+  }
+  .site-number{
+    display:none;
+  }
+
 }
 
 

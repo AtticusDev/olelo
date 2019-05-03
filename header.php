@@ -68,6 +68,7 @@ if ( is_page_template( 'templates/home.php' ) ) {
 							<div class="site-number">
 								+44 (0) 20 7894 1234
 							</div>
+
 					</div>
 				</div>
 				<div class="site-logo-wrapper">
@@ -141,6 +142,8 @@ if ( is_page_template( 'templates/home.php' ) ) {
 <?php
 }
 ?>
+
+
 
 <svg style="display: none">
 	<symbol id="icon--linkedin" viewBox="0 0 50 50">

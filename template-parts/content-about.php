@@ -25,14 +25,35 @@
 						</div>
 					</div>
 					<div class="col-md-8 col-lg-6">
-						<div class="content-wrapper">
-						<p><?php the_content(); ?></p>
+						<div class="about-intro">
+						<?php the_content(); ?>
+						</div>
+						<div class="body-copy">
+							<?php the_field('body_copy'); ?>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="title-wrapper">
+							<h1>The team</h1>
+						</div>
+					</div>
+					<div class="col-md-8 col-lg-6">
+						<div class="team-block">
+							<h4>Clinicians</h4>
+							<p>Dr Nabeel Malik</p>
+
+							<h4>Support staff</h4>
+							<p>Amber Willis - practice manager<br />
+							Anne Smith - Reception<br />
+							Jonathan Brown - Reception</p>
 						</div>
 					</div>
 				</div>
 				<div class="row justify-content-center footer-trigger">
-					<div class="col-md-10 text-center">
-						<h2 class="dark-blue">Enquire about <span style="text-transform: lowercase;"><?php the_title(); ?></span></h2>
+					<div class="col-md-10 text-center form-block">
+						<h2 class="dark-blue">Enquiry form</h2>
 						<?php
 							echo do_shortcode('[gravityform id=1 name=Enquiry title=false description=false]');
 						?>

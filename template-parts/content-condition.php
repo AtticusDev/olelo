@@ -17,8 +17,20 @@
 				<div class="row">
 					<div class="col-md-3">
 						<div class="quote-block">
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</p>
-							<span class="quote-by">Mr David Roland</span>
+							<?php 
+							$args = array( 'post_type' => 'quote', 'posts_per_page' => '1', 'orderby' => 'rand' );
+							$loop = new WP_Query( $args );
+
+							while ( $loop->have_posts() ) : $loop->the_post();
+							?>
+
+							<?php the_content(); ?>
+							<span class="quote-by"><?php the_title(); ?></span>
+
+							<?php 
+							endwhile;
+							wp_reset_query();
+							?>
 						</div>
 					</div>
 					<div class="col-md-8">
@@ -28,6 +40,10 @@
 									<div class="condition-title">
 										<h1><?php the_title(); ?></h1>
 									</div>
+									<div class="back-button">
+										<a href="/eye-conditions/" class="back-button">Back to Eye treatments</a>
+									</div>
+
 								</div>
 								<div class="col-md-12 col-lg-6">
 									<div class="condition-text">
@@ -49,14 +65,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center footer-trigger">
-					<div class="col-md-10 text-center">
-						<h2 class="dark-blue">Enquire about <span style="text-transform: lowercase;"><?php the_title(); ?></span></h2>
-						<?php
-							echo do_shortcode('[gravityform id=1 name=Enquiry title=false description=false]');
-						?>
-					</div>
-				</div>
+				<?php
+				get_template_part( 'template-parts/formblock' );
+				?>
 			</div>
 		</div>
 	</div>
